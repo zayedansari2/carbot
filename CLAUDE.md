@@ -17,7 +17,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ### Docker
 
 - `docker compose up -d` - Run the application with Docker
-- `docker pull ghcr.io/miurla/morphic:latest` - Pull prebuilt Docker image
+- `docker pull ghcr.io/miurla/carbot:latest` - Pull prebuilt Docker image
 
 ## Architecture Overview
 

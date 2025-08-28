@@ -9,8 +9,8 @@ import { cn } from '@/lib/utils'
 import { SidebarProvider } from '@/components/ui/sidebar'
 import { Toaster } from '@/components/ui/sonner'
 
-import AppSidebar from '@/components/app-sidebar'
 import ArtifactRoot from '@/components/artifact/artifact-root'
+import AuthSidebarWrapper from '@/components/auth-sidebar-wrapper'
 import Header from '@/components/header'
 import { ThemeProvider } from '@/components/theme-provider'
 
@@ -21,12 +21,12 @@ const fontSans = FontSans({
   variable: '--font-sans'
 })
 
-const title = 'Morphic'
+const title = 'CarBot'
 const description =
   'A fully open-source AI-powered answer engine with a generative UI.'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://morphic.sh'),
+  metadataBase: new URL('https://carbot.sh'),
   title,
   description,
   openGraph: {
@@ -80,7 +80,7 @@ export default async function RootLayout({
           disableTransitionOnChange
         >
           <SidebarProvider defaultOpen>
-            <AppSidebar />
+            <AuthSidebarWrapper />
             <div className="flex flex-col flex-1">
               <Header user={user} />
               <main className="flex flex-1 min-h-0">

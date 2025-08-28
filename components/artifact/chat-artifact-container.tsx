@@ -6,12 +6,13 @@ import { useMediaQuery } from '@/lib/hooks/use-media-query'
 import { cn } from '@/lib/utils'
 
 import {
-  ResizableHandle,
-  ResizablePanel,
-  ResizablePanelGroup
+    ResizableHandle,
+    ResizablePanel,
+    ResizablePanelGroup
 } from '@/components/ui/resizable'
-import { SidebarTrigger, useSidebar } from '@/components/ui/sidebar'
+import { useSidebar } from '@/components/ui/sidebar'
 
+import AuthSidebarTrigger from '@/components/auth-sidebar-trigger'
 import { InspectorDrawer } from '@/components/inspector/inspector-drawer'
 import { InspectorPanel } from '@/components/inspector/inspector-panel'
 
@@ -38,7 +39,7 @@ export function ChatArtifactContainer({
     <div className="flex-1 min-h-0 h-screen flex">
       <div className="absolute p-4 z-50 transition-opacity duration-1000">
         {(!open || isMobileSidebar) && (
-          <SidebarTrigger className="animate-fade-in" />
+          <AuthSidebarTrigger className="animate-fade-in" />
         )}
       </div>
       {/* Desktop: Resizable panels (Do not render on mobile) */}
