@@ -58,7 +58,7 @@ export const UserMessage: React.FC<UserMessageProps> = ({
               value={editedContent}
               onChange={e => setEditedContent(e.target.value)}
               autoFocus
-              className="resize-none flex w-full rounded-md border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+              className="resize-none flex w-full rounded-xl border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:shadow-deepseek disabled:cursor-not-allowed disabled:opacity-50 shadow-deepseek-sm transition-all duration-200"
               minRows={2}
               maxRows={10}
             />
@@ -86,7 +86,7 @@ export const UserMessage: React.FC<UserMessageProps> = ({
               <Button
                 variant="ghost"
                 size="icon"
-                className="rounded-full h-7 w-7"
+                className="rounded-full h-7 w-7 shadow-deepseek-sm hover:shadow-deepseek"
                 onClick={handleEditClick}
               >
                 <Pencil className="size-3.5" />

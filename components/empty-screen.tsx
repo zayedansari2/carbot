@@ -35,13 +35,13 @@ export function EmptyScreen({
             <Button
               key={index}
               variant="link"
-              className="h-auto p-0 text-base"
+              className="h-auto p-0 text-base text-brand-blue hover:text-brand-blue-700"
               name={message.message}
               onClick={async () => {
                 submitMessage(message.message)
               }}
             >
-              <ArrowRight size={16} className="mr-2 text-muted-foreground" />
+              <ArrowRight size={16} className="mr-2 text-brand-blue" />
               {message.heading}
             </Button>
           ))}

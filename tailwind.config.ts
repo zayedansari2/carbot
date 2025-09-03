@@ -43,12 +43,7 @@ const config = {
         },
         accent: {
           DEFAULT: 'hsl(var(--accent))',
-          foreground: 'hsl(var(--accent-foreground))',
-          blue: {
-            DEFAULT: 'hsl(var(--accent-blue))',
-            foreground: 'hsl(var(--accent-blue-foreground))',
-            border: 'hsl(var(--accent-blue-border))'
-          }
+          foreground: 'hsl(var(--accent-foreground))'
         },
         popover: {
           DEFAULT: 'hsl(var(--popover))',
@@ -74,12 +69,28 @@ const config = {
           'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
           border: 'hsl(var(--sidebar-border))',
           ring: 'hsl(var(--sidebar-ring))'
+        },
+        // Unified blue color system - single shade for consistency
+        'brand-blue': {
+          DEFAULT: '#2563eb',
+          50: '#eff6ff',
+          100: '#dbeafe',
+          500: '#2563eb',
+          600: '#1d4ed8',
+          700: '#1e40af'
         }
       },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)'
+        sm: 'calc(var(--radius) - 4px)',
+        xl: '12px',
+        '2xl': '16px'
+      },
+      boxShadow: {
+        deepseek: '0 4px 6px rgba(0, 0, 0, 0.1)',
+        'deepseek-lg': '0 8px 25px rgba(0, 0, 0, 0.15)',
+        'deepseek-sm': '0 2px 4px rgba(0, 0, 0, 0.05)'
       },
       keyframes: {
         'accordion-down': {
@@ -148,7 +159,17 @@ const config = {
         'slide-out-right': 'slide-out-right 0.2s ease-out'
       },
       fontFamily: {
-        sans: ['var(--font-sans)', ...fontFamily.sans]
+        sans: [
+          'var(--font-inter)',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'SF Pro Display',
+          'Segoe UI',
+          'Roboto',
+          'Helvetica Neue',
+          'Arial',
+          'sans-serif'
+        ]
       }
     }
   },

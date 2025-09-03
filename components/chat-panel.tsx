@@ -119,8 +119,8 @@ export function ChatPanel({
     >
       {messages.length === 0 && (
         <div className="mb-10 flex flex-col items-center gap-4">
-          <IconLogo className="size-12 text-muted-foreground" />
-          <p className="text-center text-3xl font-semibold">
+          <IconLogo className="size-12 text-brand-blue" />
+          <p className="text-center text-3xl font-bold text-brand-blue">
             How can I help you today?
           </p>
         </div>
@@ -135,7 +135,7 @@ export function ChatPanel({
             type="button"
             variant="outline"
             size="icon"
-            className="absolute -top-10 right-4 z-20 size-8 rounded-full shadow-md"
+            className="absolute -top-10 right-4 z-20 size-8 rounded-full shadow-deepseek"
             onClick={handleScrollToBottom}
             title="Scroll to bottom"
           >
@@ -143,7 +143,7 @@ export function ChatPanel({
           </Button>
         )}
 
-        <div className="relative flex flex-col w-full gap-2 bg-muted rounded-3xl border border-input">
+        <div className="relative flex flex-col w-full gap-2 bg-muted rounded-2xl border border-input shadow-deepseek">
           <Textarea
             ref={inputRef}
             name="input"
@@ -156,7 +156,7 @@ export function ChatPanel({
             spellCheck={false}
             value={input}
             disabled={isLoading || isToolInvocationInProgress()}
-            className="resize-none w-full min-h-12 bg-transparent border-0 p-4 text-sm placeholder:text-muted-foreground focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+            className="resize-none w-full min-h-12 bg-transparent border-0 p-4 text-sm placeholder:text-muted-foreground focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 rounded-2xl"
             onChange={e => {
               handleInputChange(e)
               setShowEmptyScreen(e.target.value.length === 0)
@@ -193,7 +193,7 @@ export function ChatPanel({
                   variant="outline"
                   size="icon"
                   onClick={handleNewChat}
-                  className="shrink-0 rounded-full group"
+                  className="shrink-0 rounded-full group shadow-deepseek-sm hover:shadow-deepseek"
                   type="button"
                   disabled={isLoading || isToolInvocationInProgress()}
                 >
@@ -204,7 +204,10 @@ export function ChatPanel({
                 type={isLoading ? 'button' : 'submit'}
                 size={'icon'}
                 variant={'outline'}
-                className={cn(isLoading && 'animate-pulse', 'rounded-full')}
+                className={cn(
+                  isLoading && 'animate-pulse',
+                  'rounded-full shadow-deepseek-sm hover:shadow-deepseek'
+                )}
                 disabled={
                   (input.length === 0 && !isLoading) ||
                   isToolInvocationInProgress()

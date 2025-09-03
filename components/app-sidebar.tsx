@@ -6,13 +6,13 @@ import { Plus } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 import {
-    Sidebar,
-    SidebarContent,
-    SidebarHeader,
-    SidebarMenu,
-    SidebarMenuButton,
-    SidebarMenuItem,
-    SidebarRail
+  Sidebar,
+  SidebarContent,
+  SidebarHeader,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
+  SidebarRail
 } from '@/components/ui/sidebar'
 
 import { ChatHistorySection } from './sidebar/chat-history-section'
@@ -26,7 +26,7 @@ export default function AppSidebar() {
       <SidebarHeader className="flex flex-row justify-between items-center">
         <Link href="/" className="flex items-center gap-2 px-2 py-3">
           <IconLogo className={cn('size-5')} />
-          <span className="font-semibold text-sm">CarBot</span>
+          <span className="font-bold text-base text-brand-blue">CarBot</span>
         </Link>
         <AuthSidebarTrigger />
       </SidebarHeader>
@@ -35,8 +35,8 @@ export default function AppSidebar() {
           <SidebarMenuItem>
             <SidebarMenuButton asChild>
               <Link href="/" className="flex items-center gap-2">
-                <Plus className="size-4" />
-                <span>New</span>
+                <Plus className="size-4 text-brand-blue" />
+                <span className="text-brand-blue">New</span>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>

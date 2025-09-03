@@ -32,7 +32,7 @@
     --input: 0 0% 89.8%;
     --ring: 0 0% 89.8%;
 
-    --radius: 0.5rem;
+    --radius: 12px;
 
     --chart-1: 12 76% 61%;
 
@@ -44,9 +44,11 @@
 
     --chart-5: 27 87% 67%;
 
-    --accent-blue: 210 100% 97%;
-    --accent-blue-foreground: 210 100% 50%;
-    --accent-blue-border: 210 100% 90%;
+    /* Unified brand blue color system */
+    --brand-blue: 224 76% 48%;
+    --brand-blue-light: 219 100% 97%;
+    --brand-blue-border: 219 100% 90%;
+    --brand-blue-hover: 224 76% 42%;
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
@@ -91,9 +93,11 @@
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
 
-    --accent-blue: 210 100% 10%;
-    --accent-blue-foreground: 210 100% 80%;
-    --accent-blue-border: 210 100% 25%;
+    /* Unified brand blue color system for dark mode */
+    --brand-blue: 224 76% 48%;
+    --brand-blue-light: 224 76% 15%;
+    --brand-blue-border: 224 76% 25%;
+    --brand-blue-hover: 224 76% 55%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -111,5 +115,65 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-feature-settings:
+      'rlig' 1,
+      'calt' 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Improved typography for headings */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 600;
+    letter-spacing: -0.025em;
+  }
+
+  /* Better button and interactive element typography */
+  button,
+  .button {
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer components {
+  /* Modern component styles with unified blue */
+  .brand-button-primary {
+    @apply bg-brand-blue text-white hover:bg-brand-blue-600 rounded-xl shadow-deepseek transition-all duration-200;
+  }
+
+  .brand-input {
+    @apply rounded-xl border-input focus:ring-2 focus:ring-brand-blue focus:border-brand-blue shadow-deepseek-sm focus:shadow-deepseek transition-all duration-200;
+  }
+
+  .brand-card {
+    @apply rounded-xl shadow-deepseek border bg-card;
+  }
+
+  .brand-sidebar-item {
+    @apply rounded-xl hover:shadow-deepseek-sm transition-all duration-200;
+  }
+
+  /* Unified blue text utilities */
+  .brand-title {
+    @apply text-brand-blue font-semibold;
+  }
+
+  .brand-subtitle {
+    @apply text-brand-blue font-medium;
+  }
+
+  .brand-link {
+    @apply text-brand-blue hover:text-brand-blue-700 transition-colors duration-200;
+  }
+
+  .brand-accent {
+    @apply text-brand-blue;
   }
 }

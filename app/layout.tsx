@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter as FontSans } from 'next/font/google'
+import { Inter } from 'next/font/google'
 
 import { Analytics } from '@vercel/analytics/next'
 
@@ -16,9 +16,11 @@ import { ThemeProvider } from '@/components/theme-provider'
 
 import './globals.css'
 
-const fontSans = FontSans({
+const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-sans'
+  variable: '--font-inter',
+  display: 'swap',
+  weight: ['300', '400', '500', '600', '700']
 })
 
 const title = 'CarBot'
@@ -70,8 +72,12 @@ export default async function RootLayout({
       <body
         className={cn(
           'min-h-screen flex flex-col font-sans antialiased',
-          fontSans.variable
+          inter.variable
         )}
+        style={{
+          fontFamily:
+            'var(--font-inter), -apple-system, BlinkMacSystemFont, "SF Pro Display", system-ui, sans-serif'
+        }}
       >
         <ThemeProvider
           attribute="class"

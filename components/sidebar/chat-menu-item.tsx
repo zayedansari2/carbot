@@ -120,7 +120,9 @@ export function ChatMenuItem({ chat }: ChatMenuItemProps) {
         className="h-auto flex-col gap-0.5 items-start p-2 pr-8"
       >
         <Link href={chat.path}>
-          <div className="text-xs font-medium truncate select-none w-full">
+          <div
+            className={`text-xs font-medium truncate select-none w-full ${isActive ? 'text-brand-blue' : ''}`}
+          >
             {chat.title}
           </div>
           <div className="text-xs text-muted-foreground w-full">

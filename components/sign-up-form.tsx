@@ -67,8 +67,8 @@ export function SignUpForm({
       <Card className="w-full max-w-sm">
         <CardHeader className="text-center">
           <CardTitle className="text-2xl flex flex-col items-center justify-center gap-4">
-            <IconLogo className="size-12" />
-            Create an account
+            <IconLogo className="size-12 text-brand-blue" />
+            <span className="font-bold text-brand-blue">Create an account</span>
           </CardTitle>
           <CardDescription>
             Enter your details below to get started

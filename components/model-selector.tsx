@@ -95,7 +95,9 @@ export function ModelSelector({ models }: ModelSelectorProps) {
                 height={18}
                 className="bg-white rounded-full border"
               />
-              <span className="text-xs font-medium">{selectedModel.name}</span>
+              <span className="text-xs font-medium text-brand-blue">
+                {selectedModel.name}
+              </span>
               {isReasoningModel(selectedModel.id) && (
                 <Lightbulb size={12} className="text-accent-blue-foreground" />
               )}
