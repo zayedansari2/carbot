@@ -6,9 +6,9 @@ import { useMediaQuery } from '@/lib/hooks/use-media-query'
 import { cn } from '@/lib/utils'
 
 import {
-    ResizableHandle,
-    ResizablePanel,
-    ResizablePanelGroup
+  ResizableHandle,
+  ResizablePanel,
+  ResizablePanelGroup
 } from '@/components/ui/resizable'
 import { useSidebar } from '@/components/ui/sidebar'
 

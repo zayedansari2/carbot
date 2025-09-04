@@ -33,11 +33,10 @@ export function SearchModeToggle() {
       onPressedChange={handleSearchModeChange}
       variant="outline"
       className={cn(
-        'gap-1 px-3 border border-input text-muted-foreground bg-background',
-        'data-[state=on]:bg-accent-blue',
-        'data-[state=on]:text-accent-blue-foreground',
-        'data-[state=on]:border-accent-blue-border',
-        'hover:bg-accent hover:text-accent-foreground rounded-full'
+        'gap-1 px-3 border border-input text-muted-foreground bg-background rounded-full',
+        'data-[state=on]:bg-brand-blue data-[state=on]:text-white data-[state=on]:border-brand-blue',
+        'hover:bg-accent hover:text-accent-foreground',
+        'transition-all duration-200'
       )}
     >
       <Globe className="size-4" />

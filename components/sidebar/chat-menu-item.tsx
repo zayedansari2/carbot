@@ -117,11 +117,11 @@ export function ChatMenuItem({ chat }: ChatMenuItemProps) {
       <SidebarMenuButton
         asChild
         isActive={isActive}
-        className="h-auto flex-col gap-0.5 items-start p-2 pr-8"
+        className="h-auto flex-col gap-1 items-start p-3 pr-10"
       >
         <Link href={chat.path}>
           <div
-            className={`text-xs font-medium truncate select-none w-full ${isActive ? 'text-brand-blue' : ''}`}
+            className={`text-sm font-medium truncate select-none w-full ${isActive ? 'text-brand-blue' : ''}`}
           >
             {chat.title}
           </div>
@@ -133,7 +133,7 @@ export function ChatMenuItem({ chat }: ChatMenuItemProps) {
 
       <DropdownMenu open={isMenuOpen} onOpenChange={setIsMenuOpen}>
         <DropdownMenuTrigger asChild>
-          <SidebarMenuAction disabled={isPending} className="size-7 p-1 mr-1">
+          <SidebarMenuAction disabled={isPending} className="size-8 p-1 mr-2">
             {isPending ? (
               <div className="flex items-center justify-center size-full">
                 <Spinner />

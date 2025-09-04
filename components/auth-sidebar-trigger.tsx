@@ -8,7 +8,9 @@ interface AuthSidebarTriggerProps {
   className?: string
 }
 
-export default function AuthSidebarTrigger({ className }: AuthSidebarTriggerProps) {
+export default function AuthSidebarTrigger({
+  className
+}: AuthSidebarTriggerProps) {
   const { isAuthenticated, loading } = useAuth()
 
   // Don't render anything while loading to prevent flash

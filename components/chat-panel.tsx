@@ -120,7 +120,7 @@ export function ChatPanel({
       {messages.length === 0 && (
         <div className="mb-10 flex flex-col items-center gap-4">
           <IconLogo className="size-12 text-brand-blue" />
-          <p className="text-center text-3xl font-bold text-brand-blue">
+          <p className="text-center text-xl font-medium text-foreground">
             How can I help you today?
           </p>
         </div>

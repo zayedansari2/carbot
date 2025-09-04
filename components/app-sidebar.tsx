@@ -23,20 +23,25 @@ import AuthSidebarTrigger from './auth-sidebar-trigger'
 export default function AppSidebar() {
   return (
     <Sidebar side="left" variant="sidebar" collapsible="offcanvas">
-      <SidebarHeader className="flex flex-row justify-between items-center">
-        <Link href="/" className="flex items-center gap-2 px-2 py-3">
-          <IconLogo className={cn('size-5')} />
-          <span className="font-bold text-base text-brand-blue">CarBot</span>
+      <SidebarHeader className="flex flex-row justify-between items-center px-3 py-4">
+        <Link
+          href="/"
+          className="flex items-center justify-center gap-3 flex-1"
+        >
+          <IconLogo className={cn('size-6')} />
+          <span className="carbot-logo text-brand-blue">CarBot</span>
         </Link>
         <AuthSidebarTrigger />
       </SidebarHeader>
-      <SidebarContent className="flex flex-col px-2 py-4 h-full">
+      <SidebarContent className="flex flex-col px-3 py-4 h-full">
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton asChild>
-              <Link href="/" className="flex items-center gap-2">
-                <Plus className="size-4 text-brand-blue" />
-                <span className="text-brand-blue">New</span>
+            <SidebarMenuButton asChild size="lg">
+              <Link href="/" className="flex items-center gap-3 py-3">
+                <Plus className="size-5 text-brand-blue" />
+                <span className="text-brand-blue text-base font-medium">
+                  New
+                </span>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>

@@ -119,7 +119,7 @@ export function ChatHistoryClient() {
     <div className="flex flex-col flex-1 h-full">
       <SidebarGroup>
         <div className="flex items-center justify-between w-full">
-          <SidebarGroupLabel className="p-0 text-brand-blue font-semibold">
+          <SidebarGroupLabel className="p-0 text-brand-blue font-semibold text-sm">
             History
           </SidebarGroupLabel>
           <ClearHistoryAction empty={isHistoryEmpty} />
@@ -127,7 +127,7 @@ export function ChatHistoryClient() {
       </SidebarGroup>
       <div className="flex-1 overflow-y-auto mb-2 relative">
         {isHistoryEmpty && !isPending ? (
-          <div className="px-2 text-foreground/30 text-sm text-center py-4">
+          <div className="px-3 text-foreground/30 text-sm text-center py-4">
             No search history
           </div>
         ) : (
