@@ -53,6 +53,7 @@ export function ChatArtifactContainer({
               'min-w-0',
               state.isOpen && 'transition-[flex-basis] duration-200 ease-out'
             )}
+            defaultSize={60}
           >
             {children}
           </ResizablePanel>
