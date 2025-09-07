@@ -17,7 +17,7 @@ import {
 
 import { ChatHistorySection } from './sidebar/chat-history-section'
 import { ChatHistorySkeleton } from './sidebar/chat-history-skeleton'
-import { IconLogo } from './ui/icons'
+import { Logo } from './ui/icons'
 import AuthSidebarTrigger from './auth-sidebar-trigger'
 
 export default function AppSidebar() {
@@ -28,7 +28,7 @@ export default function AppSidebar() {
           href="/"
           className="flex items-center justify-center gap-3 flex-1"
         >
-          <IconLogo className={cn('size-6')} />
+          <Logo className={cn('size-6')} variant="default" priority />
           <span className="carbot-logo text-brand-blue">CarBot</span>
         </Link>
         <AuthSidebarTrigger />

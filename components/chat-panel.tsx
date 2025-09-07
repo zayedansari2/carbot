@@ -12,7 +12,7 @@ import { cn } from '@/lib/utils'
 
 import { useArtifact } from './artifact/artifact-context'
 import { Button } from './ui/button'
-import { IconLogo } from './ui/icons'
+import { Logo } from './ui/icons'
 import { EmptyScreen } from './empty-screen'
 import { ModelSelector } from './model-selector'
 import { SearchModeToggle } from './search-mode-toggle'
@@ -119,7 +119,7 @@ export function ChatPanel({
     >
       {messages.length === 0 && (
         <div className="mb-10 flex flex-col items-center gap-4">
-          <IconLogo className="size-12 text-brand-blue" />
+          <Logo className="size-12" variant="large" />
           <p className="text-center text-xl font-medium text-foreground">
             How can I help you today?
           </p>

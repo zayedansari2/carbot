@@ -7,7 +7,7 @@ import {
   CollapsibleContent,
   CollapsibleTrigger
 } from './ui/collapsible'
-import { IconLogo } from './ui/icons'
+import { Logo } from './ui/icons'
 import { Separator } from './ui/separator'
 import { CurrentUserAvatar } from './current-user-avatar'
 
@@ -40,7 +40,7 @@ export function CollapsibleMessage({
         <div className="relative flex flex-col items-center">
           <div className="w-5">
             {role === 'assistant' ? (
-              <IconLogo className="size-5" />
+              <Logo className="size-5" variant="small" />
             ) : (
               <CurrentUserAvatar />
             )}

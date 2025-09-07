@@ -25,4 +25,5 @@ function IconLogo({ className, ...props }: React.ComponentProps<'svg'>) {
   )
 }
 
+export { Logo } from './logo'
 export { IconLogo }

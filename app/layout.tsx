@@ -31,9 +31,26 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://carbot.sh'),
   title,
   description,
+  applicationName: 'CarBot',
+  appleWebApp: {
+    capable: true,
+    title: 'CarBot',
+    statusBarStyle: 'default'
+  },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: '/icon.png', type: 'image/png' },
+      { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' }
+    ],
+    apple: '/apple-icon.png'
+  },
+  manifest: '/site.webmanifest',
   openGraph: {
     title,
-    description
+    description,
+    siteName: 'CarBot'
   },
   twitter: {
     title,
@@ -47,7 +64,8 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   minimumScale: 1,
-  maximumScale: 1
+  maximumScale: 1,
+  themeColor: '#0045d5'
 }
 
 export default async function RootLayout({

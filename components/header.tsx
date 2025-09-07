@@ -27,7 +27,7 @@ export const Header: React.FC<HeaderProps> = ({ user }) => {
         'w-full'
       )}
     >
-      {/* This div can be used for a logo or title on the left if needed */}
+      {/* Empty div for spacing - sidebar toggle is handled elsewhere */}
       <div></div>
 
       <div className="flex items-center gap-2">
